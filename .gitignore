@@ -26,7 +26,6 @@ __pypackages__/
 aligned_img/
 train_img/
 class/
-images
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
