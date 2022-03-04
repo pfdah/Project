@@ -1,8 +1,8 @@
-<h5>Project implementation of Facenet.</h5>
+<h3>Project implementation of Facenet.</h3>
 
 <h4>Used this to create an Face recognition attendance.</h4>
 
-<h3>Required Dependencies</h3>
+<h5>Required Dependencies</h5>
 <ul>
 <li>Tkinter</li>
 <li>Tensorflow</li>
