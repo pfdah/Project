@@ -12,7 +12,7 @@ from PIL import Image
 import tensorflow.compat.v1 as tf
 
 def perform():
-    video = './Vid2.mp4'
+    video = './vid.mp4'
     modeldir = './model/20180402-114759.pb'
     classifier_filename = './class/classifier.pkl'
     npy='./npy'

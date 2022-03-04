@@ -1,13 +1,7 @@
 import os
-import openpyxl
-import xlwt
 import xlsxwriter
-import xlrd 
 import pandas
-from xlutils.copy import copy
 import datetime
-xlrd.xlsx.ensure_elementtree_imported(False, None)
-xlrd.xlsx.Element_has_iter = True
 
 
 def insert_attendance(test_name):
