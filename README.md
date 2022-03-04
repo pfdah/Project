@@ -6,7 +6,7 @@ Our software will look like below:
 <img scr='./images/Homepage.png'>
 
 Pressing the Create Button will lead us to Create Page
-<img scr='./images/Homepage.png'>
+<img scr='./images/Create-Student.png'>
 
 Our Project Structure is as belows:
 <img src='./images/folderstructure.png'>
