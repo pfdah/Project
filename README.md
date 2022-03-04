@@ -4,11 +4,13 @@
 
 <h3>Required Dependencies</h3>
 <ul>
-<li>Tkinter
-<li>Tensorflow
-<li>PILLOW 
-<li>OpenCV
-<li>Numpy
-<li>pickle
-
+<li>Tkinter</li>
+<li>Tensorflow</li>
+<li>PILLOW</li> 
+<li>OpenCV</li>
+<li>Numpy</li>
+<li>pickle</li>
+<li>imageio</li>
+<li>scikitLearn</li>
+<li>scipy</li>
 </ul>
