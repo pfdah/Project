@@ -19,11 +19,12 @@ def putCreateWindow():
     LabelInfo = tk.Label(window,text="CREATE RECORD").place(x=40,y=80);
     
     LabelstName = tk.Label(window,text="Name").place(x=40,y=120)
-    stName = tk.Entry(window).place(x=80, y=120, width=250, height=25)
-    #stName.pack()
+    stName = tk.Entry(window)
+    stName.place(x=80, y=120, width=250, height=25)
+
     
     def captureImage():
-        capture.captureVids(stName.get())
+        capture.captureVids(stName.get)
     
     def gotoHome():
         window.destroy()
