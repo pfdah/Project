@@ -24,7 +24,8 @@ def putCreateWindow():
 
     
     def captureImage():
-        capture.captureVids(stName.get)
+        capture.captureVids(stName.get())
+        gotoHome()
     
     def gotoHome():
         window.destroy()

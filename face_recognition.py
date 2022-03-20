@@ -12,13 +12,13 @@ from PIL import Image
 import tensorflow.compat.v1 as tf
 
 def perform():
-    video = './vid.mp4'
+    video = 0
     modeldir = './model/20180402-114759.pb'
     classifier_filename = './class/classifier.pkl'
     npy='./npy'
     train_img="./train_img"
     with tf.Graph().as_default():
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.6)
+        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.5)
         sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
         with sess.as_default():
             pnet, rnet, onet = detect_face.create_mtcnn(sess, npy)
@@ -42,6 +42,8 @@ def perform():
                 (model, class_names) = pickle.load(infile,encoding='latin1')
             
             video_capture = cv2.VideoCapture(video)
+            video_capture.set(3,1280)
+            video_capture.set(4,720)
             print('Start Recognition')
             while True:
                 ret, frame = video_capture.read()
@@ -80,7 +82,7 @@ def perform():
                             predictions = model.predict_proba(emb_array)
                             best_class_indices = np.argmax(predictions, axis=1)
                             best_class_probabilities = predictions[np.arange(len(best_class_indices)), best_class_indices]
-                            if best_class_probabilities>0.87:
+                            if best_class_probabilities>0.30:
                                 cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 255, 0), 2)    #boxing face
                                 for H_i in HumanNames:
                                     if HumanNames[best_class_indices[0]] == H_i:
