@@ -9,9 +9,10 @@ def trainin():
     modeldir = './model/20180402-114759.pb'
     #modeldir = './model/20170511-185253.pb'
     classifier_filename = './class/classifier.pkl'
-    print ("Training Start")
+    print ("Training Started")
     obj=training(datadir,modeldir,classifier_filename)
     get_file=obj.main_train()
     print('Saved classifier model to file "%s"' % get_file)
-    print("All Done")
+    print("All Done.")
+    print("Training Completed")
 
